@@ -2,6 +2,8 @@
 
 > A portfolio project demonstrating AI-assisted campaign intake validation with human-in-the-loop governance, structured audit logging, and prompt-quality monitoring. Built in n8n; both workflows execute live against real Google Sheets and Gmail; all three reviewer-decision branches verified end-to-end on 2026-05-06.
 
+> **Also in this repository:** [`marketplace/`](marketplace/) contains a separate, runnable freelancing marketplace MVP (Next.js + SQLite). See [`marketplace/README.md`](marketplace/README.md) for setup, demo accounts, and tests.
+
 ---
 
 ## 👉 Start here
