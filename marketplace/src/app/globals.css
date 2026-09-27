@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, -apple-system,
+    "Segoe UI", sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, SFMono-Regular, monospace;
+
+  /* Brand palette (teal). Change these to re-theme the whole app. */
+  --color-brand-50: #effcf9;
+  --color-brand-100: #c9f5ec;
+  --color-brand-200: #94ead9;
+  --color-brand-300: #57d7c1;
+  --color-brand-400: #29bca6;
+  --color-brand-500: #12a08d;
+  --color-brand-600: #0b8074;
+  --color-brand-700: #0e665e;
+  --color-brand-800: #10514c;
+  --color-brand-900: #124440;
+  --color-brand-950: #032826;
+
+  --animate-fade-in: fade-in 150ms ease-out;
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(-2px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+@layer base {
+  html {
+    scroll-padding-top: 5rem;
+  }
+
+  body {
+    @apply bg-slate-50 text-slate-900 antialiased;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-brand-600);
+    outline-offset: 2px;
+  }
+
+  ::selection {
+    background: var(--color-brand-200);
+  }
+
+  dialog::backdrop {
+    background: rgb(15 23 42 / 0.5);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
